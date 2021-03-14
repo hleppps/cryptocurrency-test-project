@@ -186,6 +186,7 @@ html {
 }
 
 
+/*MAIN*/
 
 .a-heading-calculator {
   font-size: 2.5rem;
@@ -205,6 +206,47 @@ html {
   max-width: 622px;
 }
 
+.m-calculator-header {
+  .set-page-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.m-calculator-header-wrapper {
+  background-color: @color-dark-blue;
+
+  padding-top: 100px;
+}
+
+
+.a-input-amount {
+  font-size: 1.25rem;
+  line-height: 1.875px;
+
+  border-bottom: 1px solid #E0E0E0;
+
+  width: 403px;
+  height: 40px;
+  padding: 0;
+}
+
+.a-select-currency-calculator {
+  font-size: 1.25rem;
+  line-height: 1.875px;
+
+  background-image: url(../images/select-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: top 11px right;
+  background-color: #fff;
+
+  border-bottom: 1px solid #E0E0E0;
+
+  width: 200px;
+  height: 40px;
+
+}
+
 .a-button-calculate {
   font-size: 1.125rem;
   line-height: 1.6875rem;
@@ -220,33 +262,7 @@ html {
   height: 59px;
 }
 
-.a-input-amount {
-  font-size: 1.25rem;
-  line-height: 1.875px;
-
-  border-bottom: 1px solid #E0E0E0;
-
-  width: 403px;
-  height: 40px;
-}
-
-.a-select-currency-calculator {
-  font-size: 1.25rem;
-  line-height: 1.875px;
-
-  background-image: url(../images/select-arrow-down.svg);
-  background-repeat: no-repeat;
-  background-position: top 11px right;
-  background-color: #fff;
-
-  border-bottom: 1px solid #E0E0E0;
-
-  height: 40px;
-  width: 200px;
-
-}
-
-.m-calculator-basic-selection {
+/*.m-calculator-basic-selection {
   .centered-element;
   box-sizing: border-box;
 
@@ -258,19 +274,27 @@ html {
   width: 942px;
   height: 155px;
   margin-top: 64px;
-}
+}*/
 
-.m-calculator-header {
+.m-calculator-basic {
   .set-page-size;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .centered-element;
+  box-sizing: border-box;
+    
+  border-radius: 16px 16px 0px 0px;
+
+
+  background-color: #FBFCFE;  
+
+  height: 155px;
+  max-width: 942px;
+  padding: 0 48px;
+
 }
 
-.m-calculator-header-wrapper {
+.m-calculator-basic-wrapper {
+  padding-top: 64px;
   background-color: @color-dark-blue;
-
-  padding-top: 100px;
 }
 
 .a-heading-sum {
@@ -320,6 +344,7 @@ html {
 }
 
 .m-calculator-sub-wrapper {
+  overflow: hidden;
   padding-bottom: 64px;
   background: linear-gradient(180deg, #F8F9FB 0%, #FAFBFF 100%);
 }

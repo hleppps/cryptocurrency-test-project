@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, input, select {
+time, mark, audio, video, select {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -42,7 +42,7 @@ table {
 	border-spacing: 0;
 }
 
-button {
+button, input {
 	margin: 0;
 	border: 0;
 	font-size: 100%;
@@ -50,11 +50,16 @@ button {
 	vertical-align: baseline;
 }
 
+input:focus {
+	outline: none;
+}
+
 a {
 	text-decoration: none;
 }
 
 select {
+	padding: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;

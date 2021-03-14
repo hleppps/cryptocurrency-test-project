@@ -14,8 +14,8 @@
   </head>
 
   <body>
-    <div class="p-content-wrapper">
-      <header class="o-header">
+    <header class="t-header">
+      <div class="o-content-wrapper-header">
         
         <div class="m-menu-header">
 
@@ -25,9 +25,10 @@
           </div>
 
           <div class="m-menu-block-header">
+
             <nav>
               <ul class="m-navigation">
-                <li><a class="a-link-menu" href="">Home</a></li>
+                <li><a class="a-link-first-menu" href="">Home</a></li>
                 <li><a class="a-link-menu" href="">Calculator</a></li>
                 <li><a class="a-link-menu" href="">Contact</a></li>
               </ul>
@@ -38,7 +39,6 @@
               <button class="a-button-login-menu" disabled>Login</button>
               <span class="a-divider">|</span>
               <button class="a-button-register-menu" disabled>Register</button>
-
             </section>
           </div>
         </div>
@@ -54,39 +54,53 @@
 
           <h1 class="a-heading-header">Fastest & secure platform to invest in crypto</h1>
           <p class="a-paragraph-header">Buy and sell cryptocurrencies, trusted by 10M wallets with over $30 billion in transactions.</p>
-          <button class="m-button-header">
+          <button class="m-button-header" disabled>
             <span class="a-button-text-header">Try for FREE</span>
             <img src="images/arrow-right.svg" alt="">
           </button>
         </div>
 
-      </header>
-      <main>
-        <h2>Check how much you can earn</h2>
-        <p>Let’s check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.</p>
+      </div>
+    </header>
+
+      <main class="t-main">
         
-        <section>
-          <input type="text" placeholder="Enter your dollar amount">
-          <select>
-            <option>Ethereum</option>
-            <option>Bitcoin</option>
-            <option>value</option>
-            <option>value</option>
-            <option>value</option>
-            <option>value</option>
-            <option>value</option>
-          </select>
-          <button>Calculate</button>
-          <p>YOUR SUM:</p>
-          <div>
-            <p>0</p>
-            <p>ETH</p>
-            <p>Rate</p>
+        <section class="m-calculator">
+          <div class="m-calculator-basic-wrapper">
+            <div class="m-calculator-basic">
+              <h2 class="a-heading-calculator">Check how much you can earn</h2>
+              <p class="a-paragraph-calculator-header">Let’s check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.</p>
+              <section class="m-calculator-basic-content">
+
+                <input class="a-input-amount" type="text" placeholder="Enter your dollar amount">
+                <select class="a-select-currency">
+                  <option>Ethereum</option>
+                  <option>Bitcoin</option>
+                  <option>value</option>
+                  <option>value</option>
+                  <option>value</option>
+                  <option>value</option>
+                  <option>value</option>
+                </select>
+                <button class="a-button-calculate">Calculate</button>
+              </section>
+            </div>
           </div>
-          <p>Revenue will change based on mining difficulty and <span>Ethereum</span> price.</p>
+
+          <div class="m-calculator-sub-wrapper">
+            <div class="m-calculator-sub">
+              <p class="a-heading-sum">YOUR SUM:</p>
+              <div class="m-calculated-value">
+                <span>0.055 130 59</span>
+                <span>ETH</span>
+                <span class="a-rate">($1275)</span>
+              </div>
+              <p class="a-paragraph-calculator-main">Revenue will change based on mining difficulty and <span>Ethereum</span> price.</p>
+            </div>
+          </div>
         </section>
 
-        <section>
+        <section class="m-subscribe-main">
           <div>
             <h3>Start mining now</h3>
             <p>Join now with CRAPPO to get the latest news and start mining now</p>
@@ -102,6 +116,5 @@
           <button>Subscribe</button>
         </section>
       </main>
-    </div>
   </body>
 </html>

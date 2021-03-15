@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.min.css">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/calculator.js"></script>
+    <script src="scripts/subscribe.js"></script>
 
   </head>
 
   <body>
+
     <header class="t-header">
       <div class="o-content-wrapper-header">
         
@@ -28,9 +31,9 @@
 
             <nav>
               <ul class="m-navigation">
-                <li><a class="a-link-first-menu" href="">Home</a></li>
-                <li><a class="a-link-menu" href="">Calculator</a></li>
-                <li><a class="a-link-menu" href="">Contact</a></li>
+                <li><a class="a-link-first-menu" href="#">Home</a></li>
+                <li><a class="a-link-menu" href="#calculator">Calculator</a></li>
+                <li><a class="a-link-menu" href="#contact">Contact</a></li>
               </ul>
             </nav>
 
@@ -65,7 +68,7 @@
 
       <main class="t-main">
         
-        <section class="m-calculator">
+        <section class="m-calculator" id="calculator">
           <div class="m-calculator-header-wrapper">
             <div class="m-calculator-header">
               <h2 class="a-heading-calculator">Check how much you can earn</h2>
@@ -78,15 +81,25 @@
             <div class="m-calculator-basic">
               <input class="a-input-amount" type="text" placeholder="Enter your dollar amount">
               <select class="a-select-currency-calculator">
-                <option>Ethereum</option>
-                <option>Bitcoin</option>
-                <option>value</option>
-                <option>value</option>
-                <option>value</option>
-                <option>value</option>
-                <option>value</option>
+                <option class="a-currency">Bitcoin</option>
+                <option class="a-currency">Ethereum</option>
+                <option class="a-currency">Binance Coin</option>
+                <option class="a-currency">Tether</option>
+                <option class="a-currency">Cardano</option>
+                <option class="a-currency">Polkadot</option>
+                <option class="a-currency">XRP</option>
+                <option class="a-currency">Uniswap</option>
+                <option class="a-currency">Litecoin</option>
+                <option class="a-currency">Chainlink</option>
+                <option class="a-currency">Bitcoin Cash</option>
+                <option class="a-currency">USD Coin</option>
+                <option class="a-currency">Stellar</option>
+                <option class="a-currency">Wrapped Bitcoin</option>
+                <option class="a-currency">Dogecoin</option>
               </select>
-              <button class="a-button-calculate">Calculate</button>
+              <button class="a-button-calculate" onclick="loadData()">
+                Calculate
+              </button>
             </div>
           </div>
 
@@ -95,17 +108,21 @@
             <div class="m-calculator-sub">
               <p class="a-heading-sum">YOUR SUM:</p>
               <div class="m-calculated-value">
-                <span>0.055 130 59</span>
-                <span>ETH</span>
-                <span class="a-rate">($1275)</span>
+                <span id="a-sum">0</span>
+                <span id="a-abbr">BTC</span>
+                <span class="a-rate">($<span id="a-rate">0</span>)</span>
               </div>
-              <p class="a-paragraph-calculator-main">Revenue will change based on mining difficulty and <span>Ethereum</span> price.</p>
+              <p class="a-paragraph-calculator-main">
+                Revenue will change based on mining difficulty and 
+                <span id="a-name">Bitcoin</span> 
+                price.
+              </p>
             </div>
 
           </div>
         </section>
 
-        <section class="m-subscribe-wrapper">
+        <section class="m-subscribe-wrapper" id="contact">
           <div class="m-subscribe">
 
             <div>
@@ -115,14 +132,14 @@
 
             <div class="m-input-elements-subscribe">
               <div class="m-selection">
-                <input class="a-input-email" type="text" placeholder="Enter your email">
+                <input class="a-input-email" type="text" placeholder="Enter your email" onkeyup="checkEmail(this)">
                 <select class="a-select-currency-subscribe">
                   <option>call me maybe</option>
                   <option>value</option>
                   <option>value</option>
                 </select>
               </div>
-              <input class="a-button-submit" type="submit" name="" value="Subscribe">
+              <input class="a-button-submit" type="submit" name="" value="Subscribe" disabled>
             </div>
 
           </div>

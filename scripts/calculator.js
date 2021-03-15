@@ -39,10 +39,12 @@ function calculatePrice(data) {
 
       }
    }
-   sum = (input_value * rate)
-   a_sum.innerHTML = sum.toFixed(4)
+   sum = (input_value * rate).toFixed(5)
+   rate = Number(rate).toFixed(0)
+
+   a_sum.innerHTML = sum
    a_abbr.innerHTML = abbr
-   a_rate.innerHTML = Number(rate).toFixed(5)
+   a_rate.innerHTML = rate
    a_name.innerHTML = name
 
 }

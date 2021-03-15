@@ -7,9 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/selectize.css">
     <link rel="stylesheet" href="styles/style.min.css">
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/selectize.js"></script>
     <script src="scripts/calculator.js"></script>
     <script src="scripts/subscribe.js"></script>
 
@@ -133,10 +136,23 @@
             <div class="m-input-elements-subscribe">
               <div class="m-selection">
                 <input class="a-input-email" type="text" placeholder="Enter your email" onkeyup="checkEmail(this)">
-                <select class="a-select-currency-subscribe">
-                  <option>call me maybe</option>
-                  <option>value</option>
-                  <option>value</option>
+                <select class="m-select-currency-subscribe" placeholder="Enter currency">
+                  <option value="">Enter currency</option>
+                  <option class="test">Bitcoin</option>
+                  <option class="test">Ethereum</option>
+                  <option class="test">Binance Coin</option>
+                  <option class="test">Tether</option>
+                  <option class="test">Cardano</option>
+                  <option class="test">Polkadot</option>
+                  <option class="test">XRP</option>
+                  <option class="test">Uniswap</option>
+                  <option class="test">Litecoin</option>
+                  <option class="test">Chainlink</option>
+                  <option class="test">Bitcoin Cash</option>
+                  <option class="test">USD Coin</option>
+                  <option class="test">Stellar</option>
+                  <option class="test">Wrapped Bitcoin</option>
+                  <option class="test">Dogecoin</option>
                 </select>
               </div>
               <input class="a-button-submit" type="submit" name="" value="Subscribe" disabled>

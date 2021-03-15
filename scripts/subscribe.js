@@ -9,3 +9,11 @@ function checkEmail(element) {
       button.disabled = true;
    }
 }
+
+window.onload = () => {
+
+   $('.m-select-currency-subscribe').selectize({
+      sortField: 'text'
+   });
+
+}

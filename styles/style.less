@@ -26,16 +26,40 @@ html {
   background-color:  #0D0D2B;
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  body {
+    padding: 30px;
+  }
+}
+
+
 .a-link-first-menu {
   line-height: 1.5rem;
 
   color: @color-white;
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .a-link-first-menu {
+    font-size: 1.5rem;
+
+    text-transform: uppercase;
+  }
+}
+
 .a-link-menu {
   .a-link-first-menu;
 
   margin-left: 62px;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .a-link-menu {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-left: 0;
+
+  }
 }
 
 .a-button-login-menu {
@@ -45,6 +69,12 @@ html {
   margin-right: 24px;
 
   color: @color-white;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .a-button-login-menu {
+    display: none;
+  }
 }
 
 .a-button-register-menu {
@@ -59,10 +89,22 @@ html {
   color: @color-white;
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .a-button-register-menu {
+    display: none;
+  }
+}
+
 .a-divider {
   font-size: 1.5rem;
   color: @color-gray;
   user-select: none;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .a-divider {
+    display: none;
+  }
 }
 
 .a-site-name {
@@ -73,8 +115,22 @@ html {
   margin-left: 16px;
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .a-site-name {
+    margin-left: 0;
+  }
+}
+
+
 .m-navigation {
   .centered-element;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .m-navigation {
+    margin-top: 30px;
+    justify-content: space-around;
+  }
 }
 
 .m-authorization-menu {
@@ -86,8 +142,29 @@ html {
   .centered-element;
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .m-menu-block-header  {
+     display: block;
+  }
+}
+
 .m-menu-header {
   .centered-element;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .m-menu-header {
+     flex-direction: column;
+  }
+
+  .m-header-menu {
+    width: 100%;
+  }
+}
+
+.m-site-name {
+  display: flex;
+  justify-content: flex-start;
 }
 
 
@@ -184,6 +261,13 @@ html {
   display: flex;
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .m-main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .o-content-wrapper-header {
   .set-page-size;
 
@@ -194,6 +278,13 @@ html {
   background-repeat: no-repeat;
   background-position: 100% 100%;
 }
+
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .o-content-wrapper-header {
+    padding-top: 0
+  }
+}
+
 
 .t-header {
   background-color: @color-dark-blue;
@@ -296,7 +387,14 @@ html {
   height: 155px;
   max-width: 942px;
   padding: 0 48px;
+}
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  /*.m-calculator-basic {
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+  }*/
 }
 
 .m-calculator-basic-wrapper {
@@ -350,12 +448,24 @@ html {
   max-width: 942px;
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .m-calculator-sub {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
 .m-calculator-sub-wrapper {
   overflow: hidden;
   padding-bottom: 64px;
   background: linear-gradient(180deg, #F8F9FB 0%, #FAFBFF 100%);
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .m-calculator-sub-wrapper {
+    background: none;
+  }
+}
 
 .a-heading-subscribe {
   font-size: 2rem;
@@ -468,6 +578,11 @@ html {
   background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
 }
 
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .m-subscribe-wrapper {
+    background: none;
+  }
+}
 
 .t-main {
 }

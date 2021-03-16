@@ -3,12 +3,11 @@ function loadData() {
      "url": "https://api.coincap.io/v2/assets",
      "method": "GET",
      "timeout": 0,
-   };
+   }
 
    $.ajax(settings).done(function (response) {
       calculatePrice(response)
-      // console.log(response)
-   });
+   })
 }
 
 function calculatePrice(data) {
@@ -39,7 +38,10 @@ function calculatePrice(data) {
 
       }
    }
-   sum = (input_value * rate).toFixed(5)
+
+   sum = input_value / rate
+   sum = sum == 0 ? sum : sum.toFixed(5) 
+
    rate = Number(rate).toFixed(5)
 
    a_sum.innerHTML = prettify(sum)

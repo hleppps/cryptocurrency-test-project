@@ -101,8 +101,11 @@ html {
 
 .a-divider {
   font-size: 1.5rem;
-  color: @color-gray;
   user-select: none;
+  color: transparent;
+  background-color: @color-gray;
+
+  width: 1px;
 }
 
 @media screen and (orientation: portrait), screen and (max-width: 1400px) {
@@ -191,6 +194,13 @@ html {
   margin-right: 11px;
 }
 
+@media screen and (orientation: portrait), screen and (max-width: 1400px) {
+  .a-discount-text-basic {
+    margin-left: 10px;
+    text-align: center;
+  }
+}
+
 .m-discount-block-sub {
   display: flex;
   justify-content: center;
@@ -204,6 +214,13 @@ html {
   margin-left: 4px;
 }
 
+@media screen and (orientation: portrait), screen and (max-width: 1400px) {
+  .m-discount-block-sub {
+    height: 100%;
+    text-align: center;
+  }
+}
+
 .m-discount-block-basic {
   border-radius: 32px;
 
@@ -215,6 +232,20 @@ html {
   width: 365px;
   height: 40px;
 }
+
+@media screen and (orientation: portrait), screen and (max-width: 1400px) {
+  .m-discount-block-basic {
+  width: 100%;
+  height: 100%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .m-discount-block-basic {
+  width: 365px;
+  }
+}
+
 
 .a-heading-header {
   font-size: 4rem;
@@ -308,14 +339,19 @@ html {
   padding-top: 75px;
   padding-bottom: 126px;
 
-  background-image: url(../images/line.svg);
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-image: url(../images/line.svg), url(../images/line.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 100% 100%, 0% 100%;
 }
 
 @media screen and (orientation: portrait), screen and (max-width: 1400px) {
   .o-content-wrapper-header {
-    padding-top: 0
+    background-image: url(../images/line.svg);
+    background-size: 100%;
+    background-position: 100% 98%;
+    
+    padding-bottom: 50px;
+    padding-top: 0;
   }
 }
 
@@ -417,10 +453,12 @@ html {
     box-shadow: none;
     border-radius: 0;
 
+    line-height: 2rem;
+    text-indent: -2px;
+
     width: 80%;
     margin-top: 20px;
     height: 45px;
-    line-height: 2rem;
   }
 }
 
@@ -536,7 +574,7 @@ html {
 
   background-color: @color-white;
 
-  box-shadow: 0px -15px 450px -30px #926dd6;
+  box-shadow: 0px -15px 100px -30px #926dd6;
 
   border-radius: 0px 0px 16px 16px;
 
@@ -621,6 +659,7 @@ html {
   color: @color-white;
   background-color: transparent;
 
+  margin-bottom: 24px;
   padding: 0 0 7px 0;
   width: 374px;
 }
@@ -643,7 +682,6 @@ html {
   color: @color-white;
   background-color: @color-light-blue;
 
-  margin-top: 24px;
   width: 374px;
 }
 
@@ -708,7 +746,7 @@ html {
 
     background-image: url(../images/etherum.svg);
     background-repeat: no-repeat;
-    background-position: 10px 10px;
+    background-position: 50px 10px;
   }
 }
 

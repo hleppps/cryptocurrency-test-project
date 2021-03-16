@@ -12,11 +12,25 @@
     <link rel="stylesheet" href="styles/selectize.css">
     <link rel="stylesheet" href="styles/style.min.css">
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/selectize.js"></script>
     <script src="scripts/calculator.js"></script>
     <script src="scripts/subscribe.js"></script>
+
+    <script>
+      let is_currency_selected = false;
+      window.onload = () => {
+        loadData()
+
+        $('.m-select-currency-subscribe').selectize({
+          sortField: 'text',
+          onChange: (value) => {
+            is_currency_selected = value != '' ? true : false
+            isSubsribeable()
+          }
+        })
+      }
+    </script>
 
   </head>
 
@@ -45,7 +59,8 @@
             <section class="m-authorization-menu">
 
               <button class="a-button-login-menu" disabled>Login</button>
-              <span class="a-divider">|</span>
+              <div class="a-divider">|</div>
+
               <button class="a-button-register-menu" disabled>Register</button>
             </section>
           </div>
@@ -145,8 +160,8 @@
             <div class="m-input-elements-subscribe">
               <div class="m-selection">
                 <input class="a-input-email" type="text" placeholder="Enter your email" onkeyup="checkEmail(this)">
-                
-                <select class="m-select-currency-subscribe" placeholder="Enter currency">
+
+                <select class="m-select-currency-subscribe" placeholder="Enter currency" >
                   <option value="">Enter currency</option>
                   <option>Bitcoin</option>
                   <option>Ethereum</option>

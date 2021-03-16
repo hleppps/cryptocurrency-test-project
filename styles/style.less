@@ -354,6 +354,11 @@ html {
   padding-top: 100px;
 }
 
+@media screen and (orientation: portrait) {
+  .m-calculator-header-wrapper {
+    padding-top: 20px;
+  }
+}
 
 .a-input-amount {
   font-size: 1.25rem;
@@ -364,6 +369,13 @@ html {
   width: 403px;
   height: 40px;
   padding: 0;
+}
+
+@media screen and (orientation: portrait) {
+  .a-input-amount {
+    width: 80%;
+    margin-top: 20px;
+  }
 }
 
 .a-currency {
@@ -385,7 +397,13 @@ html {
 
   width: 200px;
   height: 40px;
+}
 
+@media screen and (orientation: portrait) {
+  .a-select-currency-calculator {
+    width: 80%;
+    margin-top: 20px;
+  }
 }
 
 .a-button-calculate {
@@ -403,10 +421,14 @@ html {
   height: 59px;
 }
 @media screen and (orientation: portrait) {
+  .a-button-calculate {
+    margin-top: 40px;
+    width: 40%;
+  }
+
   .illustration {
     width: 100%;
   }
-
 }
 
 .m-calculator-basic {
@@ -424,7 +446,14 @@ html {
   padding: 0 48px;
 }
 
-
+@media screen and (orientation: portrait) {
+  .m-calculator-basic {
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 
 .m-calculator-basic-wrapper {
   padding-top: 64px;
@@ -578,6 +607,14 @@ html {
   position: relative;
 }
 
+@media screen and (orientation: portrait) {
+  .m-subscribe {
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+  }
+}
+
 .m-subscribe:after {
   content: "";
   position: absolute;
@@ -588,6 +625,12 @@ html {
   top: 81px;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (orientation: portrait) {
+  .m-subscribe:after {
+    background-image: none;
+  }
 }
 
 .m-subscribe:before {

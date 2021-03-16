@@ -62,7 +62,6 @@ html {
     line-height: 1.375rem;
     text-transform: uppercase;
     margin-left: 0;
-
   }
 }
 
@@ -318,7 +317,6 @@ html {
     padding-top: 0
   }
 }
-
 
 .t-header {
   background-color: @color-dark-blue;
@@ -620,7 +618,6 @@ html {
 
 .m-select-currency-subscribe {
   line-height: 1.75rem;
-  /*text-indent: -2px;*/
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
@@ -628,7 +625,6 @@ html {
   background-color: @color-light-blue;
 
   margin-top: 24px;
-  /*margin-bottom: 7px;*/
   width: 374px;
 }
 
@@ -657,12 +653,12 @@ html {
 
 .m-input-elements-subscribe {
   display: flex;
+  z-index: 2;
 }
 
 @media screen and (orientation: portrait), screen and (max-width: 1400px) {
   .m-input-elements-subscribe {
     flex-direction: column;
-
   }
 }
 
@@ -675,11 +671,14 @@ html {
 
   border-radius: 16px;
   background-color: @color-light-blue;
+  background-image: url(../images/etherum.svg), url(../images/bitcoin.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 5px, 97% 100%;
   
   height: 216px;
   padding: 0 48px;
-  position: relative;
 }
+
 
 @media screen and (orientation: portrait), screen and (max-width: 1400px) {
   .m-subscribe {
@@ -688,12 +687,9 @@ html {
     padding: 15px;
     border-radius: 16px 16px 0 0;
 
-  }
-}
-
-@media screen and (orientation: portrait), screen and (max-width: 1400px) {
-  .m-subscribe:after {
-    background-image: none;
+    background-image: url(../images/etherum.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
   }
 }
 

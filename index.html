@@ -86,7 +86,7 @@
             <select class="a-select-currency-calculator">
               
             </select>
-            <button class="a-button-calculate" onclick="loadData(this)" disabled>
+            <button class="a-button-calculate" onclick="request(calculatePrice)" disabled>
               Calculate
             </button>
           </div>
@@ -97,14 +97,14 @@
           <div class="m-calculator-sub">
             <p class="a-heading-sum">YOUR SUM:</p>
             <div class="m-calculated-value">
-              <span id="a-sum">0</span>
-              <span id="a-abbr">BTC</span>
+              <span class="a-label-in-currency">0</span>
+              <span class="a-label-currency-abbr">BTC</span>
               <br class="a-line-separator">
-              <span class="a-rate">($<span id="a-rate">0</span>)</span>
+              <span class="a-rate">($<span class="a-label-rate">0</span>)</span>
             </div>
             <p class="a-paragraph-calculator-main">
               Revenue will change based on mining difficulty and 
-              <span id="a-name">Bitcoin</span> 
+              <span class="a-label-currency-name">Bitcoin</span> 
               price.
             </p>
           </div>
@@ -126,23 +126,9 @@
             <div class="m-selection">
               <input class="a-input-email" type="text" placeholder="Enter your email" name="email" onkeyup="checkEmailValidity(this)">
 
-              <select class="m-select-currency-subscribe ui search dropdown" placeholder="Enter currency" name="currency">
+              <select class="m-select-currency-subscribe ui search dropdown" name="currency" placeholder="Enter currency" onchange="checkCurrencySelection()">
                 <option value="">Enter currency</option>
-                <option>Bitcoin</option>
-                <option>Ethereum</option>
-                <option>Binance Coin</option>
-                <option>Tether</option>
-                <option>Cardano</option>
-                <option>Polkadot</option>
-                <option>XRP</option>
-                <option>Uniswap</option>
-                <option>Litecoin</option>
-                <option>Chainlink</option>
-                <option>Bitcoin Cash</option>
-                <option>USD Coin</option>
-                <option>Stellar</option>
-                <option>Wrapped Bitcoin</option>
-                <option>Dogecoin</option>
+
               </select>
             </div>
             <input class="a-button-submit" type="submit" value="Subscribe" disabled>
@@ -153,11 +139,6 @@
       </section>
     </main>
 
-
-
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="scripts/api.js"></script>
@@ -166,16 +147,9 @@
     <script src="scripts/subscribe.js"></script>
 
     <script>
-      let is_currency_selected = false;
       window.onload = () => {
-        loadData()
-
-        $('.ui.dropdown')
-          .dropdown()
-        ;
-            // is_currency_selected = value != '' ? true : false
-            // isSubsribeable()
-
+        request(fillCalculatorSelect)
+        request(fillSubscribeSelect)
       }
     </script>
   </body>

@@ -16,6 +16,10 @@
     background-color: #3671e9;
 }
 
+.ui.dropdown .menu > .item {
+    color: #fff;
+}
+
 .ui.upward.selection.dropdown.visible {
   border-radius: 0 !important;
 }
@@ -23,6 +27,14 @@
 .ui.selection.dropdown:hover
 {
     border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+
+.ui.dropdown .menu > .message:not(.ui) {
+    color: #fff;
+}
+
+.item.active {
+    color: #fff;
 }
 
 .ui.search.selection.dropdown > input.search

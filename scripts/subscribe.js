@@ -1,4 +1,5 @@
-let is_email_verified = false;
+let is_email_verified = false
+let is_currency_selected = false
 
 function checkEmailValidity(element) {
    const value = element.value
@@ -7,6 +8,32 @@ function checkEmailValidity(element) {
 
    is_email_verified = reg.test(value) ? true : false
    isSubsribeable()
+}
+
+function checkCurrencySelection() {
+   is_currency_selected = true
+   isSubsribeable()
+}
+
+function fillSubscribeSelect(currencies) {
+   let currency_select = document.querySelector('.m-select-currency-subscribe')
+   let empty_option = document.createElement('option')
+   currency_select.innerHTML = ''
+
+   empty_option.value = ''
+   empty_option.innerHTML = 'Enter currency'
+   currency_select.appendChild(empty_option)
+
+   for (currency of currencies) {
+      const option_value = currency['name']
+
+      let option = document.createElement('option')
+      option.innerHTML = option_value
+
+      currency_select.appendChild(option)
+   }
+
+   $('.ui.dropdown').dropdown();
 }
 
 function isSubsribeable() {

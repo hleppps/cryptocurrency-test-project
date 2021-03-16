@@ -1,23 +1,9 @@
-function checkInputValidity(element) {
+function checkCalculatorInputValidity(element) {
    const input_value = element.value
    const reg = /^\d+$/
    let button_calculate = document.querySelector('.a-button-calculate')
 
    button_calculate.disabled = !(reg.test(input_value) == true)
-}
-
-function loadData() {
-   var settings = {
-     "url": "https://api.coincap.io/v2/assets",
-     "method": "GET",
-     "timeout": 0,
-   }
-
-   $.ajax(settings).done(function (response) {
-      const currencies = Object.values(response['data'])
-      fillSelect(currencies)
-      // calculatePrice(currencies)
-   })
 }
 
 function fillSelect(currencies) {
@@ -34,7 +20,6 @@ function fillSelect(currencies) {
       currency_select.appendChild(option)
    }
 }
-
 
 // TO FIX
 function calculatePrice(data) {

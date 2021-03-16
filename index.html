@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="styles/semantic.css">
+    <link rel="stylesheet" href="styles/semantic-reset.css">
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/selectize.css">
     <link rel="stylesheet" href="styles/style.min.css">
   </head>
 
@@ -81,7 +82,7 @@
         <div class="m-calculator-basic-wrapper">
           
           <div class="m-calculator-basic">
-            <input class="a-input-amount" type="text" placeholder="Enter your dollar amount" onkeyup="checkInputValidity(this)">
+            <input class="a-input-amount" type="text" placeholder="Enter your dollar amount" onkeyup="checkCalculatorInputValidity(this)">
             <select class="a-select-currency-calculator">
               
             </select>
@@ -116,16 +117,16 @@
         <div class="m-subscribe">
 
 
-          <div>
+          <div class="m-text-elements-subscribe">
             <h3 class="a-heading-subscribe">Start mining now</h3>
             <p class="a-paragraph-subscribe">Join now with CRAPPO to get the latest news and start mining now</p>
           </div>
 
           <form class="m-input-elements-subscribe" action="">
             <div class="m-selection">
-              <input class="a-input-email" type="text" placeholder="Enter your email" name="email" onkeyup="checkEmail(this)">
+              <input class="a-input-email" type="text" placeholder="Enter your email" name="email" onkeyup="checkEmailValidity(this)">
 
-              <select class="m-select-currency-subscribe" placeholder="Enter currency" name="currency">
+              <select class="m-select-currency-subscribe ui search dropdown" placeholder="Enter currency" name="currency">
                 <option value="">Enter currency</option>
                 <option>Bitcoin</option>
                 <option>Ethereum</option>
@@ -152,8 +153,15 @@
       </section>
     </main>
 
+
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scripts/selectize.js"></script>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/semantic.js"></script>
     <script src="scripts/calculator.js"></script>
     <script src="scripts/subscribe.js"></script>
 
@@ -162,13 +170,12 @@
       window.onload = () => {
         loadData()
 
-        $('.m-select-currency-subscribe').selectize({
-          sortField: 'text',
-          onChange: (value) => {
-            is_currency_selected = value != '' ? true : false
-            isSubsribeable()
-          }
-        })
+        $('.ui.dropdown')
+          .dropdown()
+        ;
+            // is_currency_selected = value != '' ? true : false
+            // isSubsribeable()
+
       }
     </script>
   </body>

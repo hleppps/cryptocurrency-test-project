@@ -403,7 +403,7 @@ html {
   .a-select-currency-calculator {
     width: 80%;
     margin-top: 20px;
-
+    height: 45px;
     line-height: 2rem;
   }
 }
@@ -535,12 +535,25 @@ html {
   margin-top: 48px;
 }
 
+@media screen and (orientation: portrait) {
+  .a-heading-subscribe {
+    text-align: center;
+  }
+}
+
 .a-paragraph-subscribe {
   line-height: 1.75rem;
   letter-spacing: .01rem;
 
   margin-top: 16px;
   width: 348px;
+}
+
+@media screen and (orientation: portrait) {
+  .a-paragraph-subscribe {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .a-button-submit {
@@ -556,6 +569,15 @@ html {
   height: 55px;
 }
 
+@media screen and (orientation: portrait) {
+  .a-button-submit {
+    margin-top: 30px;
+    width: 40%;
+    text-align: center;
+    margin: 40px auto 10px;
+  }
+}
+
 .a-input-email {
   line-height: 1.75rem;
 
@@ -565,6 +587,13 @@ html {
 
   padding: 0 0 7px 0;
   width: 374px;
+}
+
+@media screen and (orientation: portrait) {
+  .a-input-email {
+    margin-top: 20px;
+    width: 80%;
+  }
 }
 
 .m-select-currency-subscribe {
@@ -581,17 +610,38 @@ html {
   width: 374px;
 }
 
+@media screen and (orientation: portrait) {
+  .m-select-currency-subscribe {
+    width: 80%;
+  }
+}
+
 .m-selection {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   margin-top: 55px;
   margin-right: 46px;
 }
 
+@media screen and (orientation: portrait) {
+  .m-selection {
+    width: 100%;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+}
+
 .m-input-elements-subscribe {
   display: flex;
-  flex-direction: row;
+}
+
+@media screen and (orientation: portrait) {
+  .m-input-elements-subscribe {
+    flex-direction: column;
+
+  }
 }
 
 .m-subscribe {
@@ -613,7 +663,7 @@ html {
   .m-subscribe {
     flex-direction: column;
     height: 100%;
-    padding: 10px;
+    padding: 15px;
   }
 }
 

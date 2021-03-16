@@ -42,9 +42,14 @@ function calculatePrice(data) {
    sum = (input_value * rate).toFixed(5)
    rate = Number(rate).toFixed(5)
 
-   a_sum.innerHTML = sum
+   a_sum.innerHTML = prettify(sum)
    a_abbr.innerHTML = abbr
-   a_rate.innerHTML = rate
+   a_rate.innerHTML = prettify(rate)
    a_name.innerHTML = name
 
+}
+
+function prettify(num) {
+   var n = num.toString()
+   return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ')
 }

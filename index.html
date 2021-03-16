@@ -81,7 +81,7 @@
         <div class="m-calculator-basic-wrapper">
           
           <div class="m-calculator-basic">
-            <input class="a-input-amount" type="text" placeholder="Enter your dollar amount">
+            <input class="a-input-amount" type="text" placeholder="Enter your dollar amount" onkeyup="checkInputValidity(this)">
             <select class="a-select-currency-calculator">
               <option class="a-currency">Bitcoin</option>
               <option class="a-currency">Ethereum</option>
@@ -99,7 +99,7 @@
               <option class="a-currency">Wrapped Bitcoin</option>
               <option class="a-currency">Dogecoin</option>
             </select>
-            <button class="a-button-calculate" onclick="loadData()">
+            <button class="a-button-calculate" onclick="loadData(this)" disabled>
               Calculate
             </button>
           </div>

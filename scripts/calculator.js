@@ -10,8 +10,16 @@ function loadData() {
    })
 }
 
+function checkInputValidity(element) {
+   const input_value = element.value
+   const reg = /^\d+$/
+   let button_calculate = document.querySelector('.a-button-calculate')
+
+   button_calculate.disabled = !(reg.test(input_value) == true)
+}
+
 function calculatePrice(data) {
-   let name = ''
+   let namez = ''
    let abbr = ''
    let rate = 0
    let sum = 0

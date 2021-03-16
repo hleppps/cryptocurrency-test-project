@@ -26,7 +26,7 @@ html {
   background-color:  #0D0D2B;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   body {
     padding: 30px;
   }
@@ -39,9 +39,11 @@ html {
   color: @color-white;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-link-first-menu {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.375rem;
 
     text-transform: uppercase;
   }
@@ -53,9 +55,11 @@ html {
   margin-left: 62px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-link-menu {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.375rem;
     text-transform: uppercase;
     margin-left: 0;
 
@@ -71,7 +75,7 @@ html {
   color: @color-white;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-button-login-menu {
     display: none;
   }
@@ -89,7 +93,7 @@ html {
   color: @color-white;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-button-register-menu {
     display: none;
   }
@@ -101,7 +105,7 @@ html {
   user-select: none;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-divider {
     display: none;
   }
@@ -115,9 +119,9 @@ html {
   margin-left: 16px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-site-name {
-    margin-left: 0;
+    margin-left: 10px;
   }
 }
 
@@ -126,7 +130,7 @@ html {
   .centered-element;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-navigation {
     margin-top: 30px;
     justify-content: space-around;
@@ -142,7 +146,7 @@ html {
   .centered-element;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-menu-block-header  {
      display: block;
   }
@@ -152,7 +156,7 @@ html {
   .centered-element;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-menu-header {
      flex-direction: column;
   }
@@ -221,7 +225,7 @@ html {
   margin-top: 24px; 
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-heading-header {
     font-size: 3rem;
     line-height: 3.5rem;
@@ -240,7 +244,7 @@ html {
   width: 435px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-paragraph-header {
     width: 100%;
     text-align: center;
@@ -265,7 +269,7 @@ html {
   padding: 16px 16px 16px 24px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-button-header {
     margin: 20px auto 0;
   }
@@ -273,6 +277,12 @@ html {
 
 .m-main-content {
   padding-top: 137px;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1200px) {
+  .m-main-content {
+    padding-top: 90px;
+  }
 }
 
 .m-main-image {
@@ -283,7 +293,7 @@ html {
   display: flex;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-main-header {
     flex-direction: column;
     justify-content: center;
@@ -302,7 +312,7 @@ html {
   background-position: 100% 100%;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .o-content-wrapper-header {
     padding-top: 0
   }
@@ -323,7 +333,7 @@ html {
   line-height: 3.75rem;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-heading-calculator {
     text-align: center;
   }
@@ -354,7 +364,7 @@ html {
   padding-top: 100px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-calculator-header-wrapper {
     padding-top: 20px;
   }
@@ -371,7 +381,7 @@ html {
   padding: 0;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-input-amount {
     width: 80%;
     margin-top: 20px;
@@ -399,7 +409,7 @@ html {
   height: 40px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-select-currency-calculator {
     width: 80%;
     margin-top: 20px;
@@ -422,7 +432,7 @@ html {
   width: 147px;
   height: 59px;
 }
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-button-calculate {
     margin-top: 40px;
     width: 40%;
@@ -448,7 +458,7 @@ html {
   padding: 0 48px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-calculator-basic {
     height: 100%;
     padding: 10px;
@@ -508,7 +518,7 @@ html {
   max-width: 942px;
 }
 
-@media screen and (orientation: portrait) and (max-width: 1200px) {
+@media screen and (orientation: portrait) and (max-width: 1200px) and (max-width: 1200px) {
   .m-calculator-sub {
     box-shadow: none;
     border-radius: 0;
@@ -521,7 +531,7 @@ html {
   background: linear-gradient(180deg, #F8F9FB 0%, #FAFBFF 100%);
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-calculator-sub-wrapper {
     background: none;
   }
@@ -535,7 +545,7 @@ html {
   margin-top: 48px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-heading-subscribe {
     text-align: center;
   }
@@ -549,7 +559,7 @@ html {
   width: 348px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-paragraph-subscribe {
     width: 100%;
     text-align: center;
@@ -569,7 +579,7 @@ html {
   height: 55px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-button-submit {
     margin-top: 30px;
     width: 40%;
@@ -589,8 +599,11 @@ html {
   width: 374px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .a-input-email {
+    box-shadow: none;
+    border: none;
+    
     margin-top: 20px;
     width: 80%;
   }
@@ -610,7 +623,7 @@ html {
   width: 374px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-select-currency-subscribe {
     width: 80%;
   }
@@ -625,7 +638,7 @@ html {
   margin-right: 46px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-selection {
     width: 100%;
     margin: 0;
@@ -637,7 +650,7 @@ html {
   display: flex;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-input-elements-subscribe {
     flex-direction: column;
 
@@ -659,15 +672,17 @@ html {
   position: relative;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-subscribe {
     flex-direction: column;
     height: 100%;
     padding: 15px;
+    border-radius: 16px 16px 0 0;
+
   }
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-subscribe:after {
     background-image: none;
   }
@@ -678,7 +693,7 @@ html {
   background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1200px) {
   .m-subscribe-wrapper {
     background: none;
   }

@@ -83,21 +83,7 @@
           <div class="m-calculator-basic">
             <input class="a-input-amount" type="text" placeholder="Enter your dollar amount" onkeyup="checkInputValidity(this)">
             <select class="a-select-currency-calculator">
-              <option class="a-currency">Bitcoin</option>
-              <option class="a-currency">Ethereum</option>
-              <option class="a-currency">Binance Coin</option>
-              <option class="a-currency">Tether</option>
-              <option class="a-currency">Cardano</option>
-              <option class="a-currency">Polkadot</option>
-              <option class="a-currency">XRP</option>
-              <option class="a-currency">Uniswap</option>
-              <option class="a-currency">Litecoin</option>
-              <option class="a-currency">Chainlink</option>
-              <option class="a-currency">Bitcoin Cash</option>
-              <option class="a-currency">USD Coin</option>
-              <option class="a-currency">Stellar</option>
-              <option class="a-currency">Wrapped Bitcoin</option>
-              <option class="a-currency">Dogecoin</option>
+              
             </select>
             <button class="a-button-calculate" onclick="loadData(this)" disabled>
               Calculate
@@ -137,9 +123,9 @@
 
           <form class="m-input-elements-subscribe" action="">
             <div class="m-selection">
-              <input class="a-input-email" type="text" placeholder="Enter your email" onkeyup="checkEmail(this)">
+              <input class="a-input-email" type="text" placeholder="Enter your email" name="email" onkeyup="checkEmail(this)">
 
-              <select class="m-select-currency-subscribe" placeholder="Enter currency" >
+              <select class="m-select-currency-subscribe" placeholder="Enter currency" name="currency">
                 <option value="">Enter currency</option>
                 <option>Bitcoin</option>
                 <option>Ethereum</option>

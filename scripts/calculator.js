@@ -1,15 +1,3 @@
-function loadData() {
-   var settings = {
-     "url": "https://api.coincap.io/v2/assets",
-     "method": "GET",
-     "timeout": 0,
-   }
-
-   $.ajax(settings).done(function (response) {
-      calculatePrice(response)
-   })
-}
-
 function checkInputValidity(element) {
    const input_value = element.value
    const reg = /^\d+$/
@@ -18,8 +6,39 @@ function checkInputValidity(element) {
    button_calculate.disabled = !(reg.test(input_value) == true)
 }
 
+function loadData() {
+   var settings = {
+     "url": "https://api.coincap.io/v2/assets",
+     "method": "GET",
+     "timeout": 0,
+   }
+
+   $.ajax(settings).done(function (response) {
+      const currencies = Object.values(response['data'])
+      fillSelect(currencies)
+      // calculatePrice(currencies)
+   })
+}
+
+function fillSelect(currencies) {
+   let currency_select = document.querySelector('.a-select-currency-calculator')
+   currency_select.innerHTML = ''
+   for (currency of currencies) {
+      const option_value = currency['name']
+
+      let option = document.createElement('option')
+      console.log(option)
+      option.innerHTML = option_value
+      option.classList.add("a-currency")
+
+      currency_select.appendChild(option)
+   }
+}
+
+
+// TO FIX
 function calculatePrice(data) {
-   let namez = ''
+   let name = ''
    let abbr = ''
    let rate = 0
    let sum = 0
@@ -33,8 +52,6 @@ function calculatePrice(data) {
    input_value = input_value.value
    input_currency = (input_currency.value).toLowerCase()
    input_currency = input_currency.replace(' ', '-')
-
-   data = data['data']
 
    for (element in data) {
       if (data[element]['id'] == input_currency) {

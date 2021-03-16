@@ -172,8 +172,16 @@ html {
   padding: 16px 16px 16px 24px;
 }
 
-.m-content-header {
-  margin-top: 137px;
+.m-main-content {
+  padding-top: 137px;
+}
+
+.m-main-image {
+  padding-top: 51px;
+}
+
+.m-main-header {
+  display: flex;
 }
 
 .o-content-wrapper-header {
@@ -181,11 +189,16 @@ html {
 
   padding-top: 75px;
   padding-bottom: 126px;
+
+  background-image: url(../images/line.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 
 .t-header {
   background-color: @color-dark-blue;
 }
+
 
 
 /*MAIN*/
@@ -418,14 +431,37 @@ html {
 
   box-sizing: border-box;
 
-
   border-radius: 16px;
   background-color: @color-light-blue;
   
   height: 216px;
   padding: 0 48px;
+  position: relative;
 }
 
+.m-subscribe:after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/bitcoin.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+  left: 1045px;
+  top: 81px;
+  width: 100%;
+  height: 100%;
+}
+
+.m-subscribe:before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/etherum.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+  left: 22px;
+  top: -40px;
+  width: 100%;
+  height: 100%;
+}
 
 .m-subscribe-wrapper {
   padding: 88px 0;

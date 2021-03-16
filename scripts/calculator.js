@@ -40,7 +40,7 @@ function calculatePrice(data) {
       }
    }
    sum = (input_value * rate).toFixed(5)
-   rate = Number(rate).toFixed(0)
+   rate = Number(rate).toFixed(5)
 
    a_sum.innerHTML = sum
    a_abbr.innerHTML = abbr

@@ -11,27 +11,6 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/selectize.css">
     <link rel="stylesheet" href="styles/style.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scripts/selectize.js"></script>
-    <script src="scripts/calculator.js"></script>
-    <script src="scripts/subscribe.js"></script>
-
-    <script>
-      let is_currency_selected = false;
-      window.onload = () => {
-        loadData()
-
-        $('.m-select-currency-subscribe').selectize({
-          sortField: 'text',
-          onChange: (value) => {
-            is_currency_selected = value != '' ? true : false
-            isSubsribeable()
-          }
-        })
-      }
-    </script>
-
   </head>
 
   <body>
@@ -89,102 +68,122 @@
       </div>
     </header>
 
-      <main class="t-main">
-        
-        <section class="m-calculator" id="calculator">
-          <div class="m-calculator-header-wrapper">
-            <div class="m-calculator-header">
-              <h2 class="a-heading-calculator">Check how much you can earn</h2>
-              <p class="a-paragraph-calculator-header">Let’s check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.</p>
+    <main class="t-main">
+      
+      <section class="m-calculator" id="calculator">
+        <div class="m-calculator-header-wrapper">
+          <div class="m-calculator-header">
+            <h2 class="a-heading-calculator">Check how much you can earn</h2>
+            <p class="a-paragraph-calculator-header">Let’s check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.</p>
+          </div>
+        </div>
+
+        <div class="m-calculator-basic-wrapper">
+          
+          <div class="m-calculator-basic">
+            <input class="a-input-amount" type="text" placeholder="Enter your dollar amount">
+            <select class="a-select-currency-calculator">
+              <option class="a-currency">Bitcoin</option>
+              <option class="a-currency">Ethereum</option>
+              <option class="a-currency">Binance Coin</option>
+              <option class="a-currency">Tether</option>
+              <option class="a-currency">Cardano</option>
+              <option class="a-currency">Polkadot</option>
+              <option class="a-currency">XRP</option>
+              <option class="a-currency">Uniswap</option>
+              <option class="a-currency">Litecoin</option>
+              <option class="a-currency">Chainlink</option>
+              <option class="a-currency">Bitcoin Cash</option>
+              <option class="a-currency">USD Coin</option>
+              <option class="a-currency">Stellar</option>
+              <option class="a-currency">Wrapped Bitcoin</option>
+              <option class="a-currency">Dogecoin</option>
+            </select>
+            <button class="a-button-calculate" onclick="loadData()">
+              Calculate
+            </button>
+          </div>
+        </div>
+
+        <div class="m-calculator-sub-wrapper">
+
+          <div class="m-calculator-sub">
+            <p class="a-heading-sum">YOUR SUM:</p>
+            <div class="m-calculated-value">
+              <span id="a-sum">0</span>
+              <span id="a-abbr">BTC</span>
+              <br class="a-line-separator">
+              <span class="a-rate">($<span id="a-rate">0</span>)</span>
             </div>
+            <p class="a-paragraph-calculator-main">
+              Revenue will change based on mining difficulty and 
+              <span id="a-name">Bitcoin</span> 
+              price.
+            </p>
           </div>
 
-          <div class="m-calculator-basic-wrapper">
-            
-            <div class="m-calculator-basic">
-              <input class="a-input-amount" type="text" placeholder="Enter your dollar amount">
-              <select class="a-select-currency-calculator">
-                <option class="a-currency">Bitcoin</option>
-                <option class="a-currency">Ethereum</option>
-                <option class="a-currency">Binance Coin</option>
-                <option class="a-currency">Tether</option>
-                <option class="a-currency">Cardano</option>
-                <option class="a-currency">Polkadot</option>
-                <option class="a-currency">XRP</option>
-                <option class="a-currency">Uniswap</option>
-                <option class="a-currency">Litecoin</option>
-                <option class="a-currency">Chainlink</option>
-                <option class="a-currency">Bitcoin Cash</option>
-                <option class="a-currency">USD Coin</option>
-                <option class="a-currency">Stellar</option>
-                <option class="a-currency">Wrapped Bitcoin</option>
-                <option class="a-currency">Dogecoin</option>
+        </div>
+      </section>
+
+      <section class="m-subscribe-wrapper" id="contact">
+
+        <div class="m-subscribe">
+
+
+          <div>
+            <h3 class="a-heading-subscribe">Start mining now</h3>
+            <p class="a-paragraph-subscribe">Join now with CRAPPO to get the latest news and start mining now</p>
+          </div>
+
+          <form class="m-input-elements-subscribe" action="">
+            <div class="m-selection">
+              <input class="a-input-email" type="text" placeholder="Enter your email" onkeyup="checkEmail(this)">
+
+              <select class="m-select-currency-subscribe" placeholder="Enter currency" >
+                <option value="">Enter currency</option>
+                <option>Bitcoin</option>
+                <option>Ethereum</option>
+                <option>Binance Coin</option>
+                <option>Tether</option>
+                <option>Cardano</option>
+                <option>Polkadot</option>
+                <option>XRP</option>
+                <option>Uniswap</option>
+                <option>Litecoin</option>
+                <option>Chainlink</option>
+                <option>Bitcoin Cash</option>
+                <option>USD Coin</option>
+                <option>Stellar</option>
+                <option>Wrapped Bitcoin</option>
+                <option>Dogecoin</option>
               </select>
-              <button class="a-button-calculate" onclick="loadData()">
-                Calculate
-              </button>
             </div>
-          </div>
+            <input class="a-button-submit" type="submit" value="Subscribe" disabled>
+          </form>
 
-          <div class="m-calculator-sub-wrapper">
+        </div>
 
-            <div class="m-calculator-sub">
-              <p class="a-heading-sum">YOUR SUM:</p>
-              <div class="m-calculated-value">
-                <span id="a-sum">0</span>
-                <span id="a-abbr">BTC</span>
-                <br class="a-line-separator">
-                <span class="a-rate">($<span id="a-rate">0</span>)</span>
-              </div>
-              <p class="a-paragraph-calculator-main">
-                Revenue will change based on mining difficulty and 
-                <span id="a-name">Bitcoin</span> 
-                price.
-              </p>
-            </div>
+      </section>
+    </main>
 
-          </div>
-        </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/selectize.js"></script>
+    <script src="scripts/calculator.js"></script>
+    <script src="scripts/subscribe.js"></script>
 
-        <section class="m-subscribe-wrapper" id="contact">
+    <script>
+      let is_currency_selected = false;
+      window.onload = () => {
+        loadData()
 
-          <div class="m-subscribe">
-
-
-            <div>
-              <h3 class="a-heading-subscribe">Start mining now</h3>
-              <p class="a-paragraph-subscribe">Join now with CRAPPO to get the latest news and start mining now</p>
-            </div>
-
-            <div class="m-input-elements-subscribe">
-              <div class="m-selection">
-                <input class="a-input-email" type="text" placeholder="Enter your email" onkeyup="checkEmail(this)">
-
-                <select class="m-select-currency-subscribe" placeholder="Enter currency" >
-                  <option value="">Enter currency</option>
-                  <option>Bitcoin</option>
-                  <option>Ethereum</option>
-                  <option>Binance Coin</option>
-                  <option>Tether</option>
-                  <option>Cardano</option>
-                  <option>Polkadot</option>
-                  <option>XRP</option>
-                  <option>Uniswap</option>
-                  <option>Litecoin</option>
-                  <option>Chainlink</option>
-                  <option>Bitcoin Cash</option>
-                  <option>USD Coin</option>
-                  <option>Stellar</option>
-                  <option>Wrapped Bitcoin</option>
-                  <option>Dogecoin</option>
-                </select>
-              </div>
-              <input class="a-button-submit" type="submit" name="" value="Subscribe" disabled>
-            </div>
-
-          </div>
-
-        </section>
-      </main>
+        $('.m-select-currency-subscribe').selectize({
+          sortField: 'text',
+          onChange: (value) => {
+            is_currency_selected = value != '' ? true : false
+            isSubsribeable()
+          }
+        })
+      }
+    </script>
   </body>
 </html>

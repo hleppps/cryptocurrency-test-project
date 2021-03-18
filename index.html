@@ -151,12 +151,15 @@
         request(fillCalculatorSelect)
         request(fillSubscribeSelect)
 
-        $('.nav a').click(function(){
-          $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-          }, 500);
-          return false;
-        }); 
+        $('.nav ul li a').click(function (e) {
+            
+            var linkHref = $(this).attr("href");
+            var idElement = linkHref.substr(linkHref.indexOf("#"));
+            $('html, body').animate({
+                scrollTop: $(idElement).offset().top
+            }, 1000);
+            return false;
+        });
 
       }
     </script>

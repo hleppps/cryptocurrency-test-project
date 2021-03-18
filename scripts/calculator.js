@@ -1,5 +1,5 @@
-function checkCalculatorInputValidity(element) {
-   const input_value = element.value
+function checkCalculatorInputValidity() {
+   const input_value = this.value
    const reg = /^\d+$/
    let button_calculate = document.querySelector('.a-button-calculate')
 

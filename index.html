@@ -80,10 +80,12 @@
         <div class="m-calculator-basic-wrapper">
           
           <div class="m-calculator-basic">
-            <input class="a-input-amount" type="text" placeholder="Enter your dollar amount" onkeyup="checkCalculatorInputValidity(this)">
+            <input class="a-input-amount" type="text" placeholder="Enter your dollar amount">
             <select class="a-select-currency-calculator">
               
             </select>
+            
+            <!-- TODO EVENT HANDLER -->
             <button class="a-button-calculate" onclick="request(calculatePrice)" disabled>
               Calculate
             </button>
@@ -122,9 +124,11 @@
 
           <form class="m-input-elements-subscribe" action="">
             <div class="m-selection">
-              <input class="a-input-email" type="text" placeholder="Enter your email" name="email" onkeyup="checkEmailValidity(this)">
+              <input class="a-input-email" type="text" placeholder="Enter your email" name="email">
 
               <div class="m-select-currency-subscribe searchable">
+
+                <!-- TODO EVENT HANDLER -->
                 <input class="m-currency-searcher-subscribe" type="text" placeholder="Enter currency" onkeyup="filterFunction(this,event)">
                 <ul class="m-currencies-container-subscribe"></ul>
               </div>
@@ -146,38 +150,14 @@
     <script src="scripts/subscribe.js"></script>
     <script src="scripts/search-value.js"></script>
     <script src="scripts/smooth-scroll.js"></script>
+    <script src="scripts/event-handling.js"></script>
 
     <script>
       window.onload = () => {
         smoothScroll()
+        handleEvent()
         request(fillCalculatorSelect)
         request(fillSubscribeSelect)
-
-  //   $('a[href*="#"]')
-  //   .not('[href="#"]')
-  //   .click(function(event) {
-
-  //   if (
-  //     location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-  //     && 
-  //     location.hostname == this.hostname
-  //   ) {
-
-  //     var target = $(this.hash);
-  //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-  //     if (target.length) {
-
-  //       event.preventDefault();
-  //       $('html, body').animate({
-  //         scrollTop: target.offset().top
-  //       }, 1000, function() {
-
-  //       });
-  //     }
-  //   }
-  // });
-
       }
     </script>
   </body>

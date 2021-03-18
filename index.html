@@ -8,8 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="styles/semantic.css">
-    <link rel="stylesheet" href="styles/semantic-reset.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.min.css">
   </head>
@@ -126,10 +124,15 @@
             <div class="m-selection">
               <input class="a-input-email" type="text" placeholder="Enter your email" name="email" onkeyup="checkEmailValidity(this)">
 
-              <select class="m-select-currency-subscribe ui search dropdown" name="currency" placeholder="Enter currency" onchange="checkCurrencySelection()">
+              <!-- <select class="m-select-currency-subscribe" name="currency" placeholder="Enter currency" >
                 <option value="">Enter currency</option>
 
-              </select>
+              </select> -->
+              <div class="m-select-currency-subscribe searchable">
+                <input class="m-currency-searcher-subscribe" type="text" placeholder="Enter currency" onkeyup="filterFunction(this,event)">
+                <ul class="m-currencies-container-subscribe"></ul>
+              </div>
+
             </div>
             <input class="a-button-submit" type="submit" value="Subscribe" disabled>
           </form>
@@ -142,11 +145,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-    <script src="scripts/scroll-polyfill.js"></script>
     <script src="scripts/api.js"></script>
-    <script src="scripts/semantic.js"></script>
     <script src="scripts/calculator.js"></script>
     <script src="scripts/subscribe.js"></script>
+    <script src="scripts/search-value.js"></script>
 
     <script>
       window.onload = () => {

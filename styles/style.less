@@ -909,10 +909,41 @@ body
     line-height: 1.75rem;
 
     width: 374px;
+    // background-color: red;
 
     color: @color-white;
+    // padding-bottom: 7px;
     border-bottom: 1px solid rgba(255, 255, 255, .4);
 }
+
+.m-currency-searcher-subscribe {
+    margin-bottom: 7px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    line-height: 1.75rem;
+    color: @color-white;
+    background-color: @color-light-blue;
+}
+
+.m-currencies-container-subscribe {
+    display: none;
+    background-color: @color-light-blue;
+    max-height: 180px;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+}
+
+.a-currency-name {
+    padding: 7px 9px;
+    border-top: 1px solid rgba(255, 255, 255, .4);;
+    cursor: pointer;
+    color: @color-white;
+}
+
 
 @media  screen and (max-width: 1400px)
 {

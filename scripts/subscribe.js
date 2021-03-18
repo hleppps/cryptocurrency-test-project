@@ -11,29 +11,24 @@ function checkEmailValidity(element) {
 }
 
 function checkCurrencySelection() {
+   alert('q')
    is_currency_selected = true
    isSubsribeable()
 }
 
 function fillSubscribeSelect(currencies) {
-   let currency_select = document.querySelector('.m-select-currency-subscribe')
-   let empty_option = document.createElement('option')
-   currency_select.innerHTML = ''
-
-   empty_option.value = ''
-   empty_option.innerHTML = 'Enter currency'
-   currency_select.appendChild(empty_option)
+   let currency_searcher = document.querySelector('.m-currency-searcher-subscribe').value
+   let currencies_container = document.querySelector('.m-currencies-container-subscribe')
 
    for (currency of currencies) {
-      const option_value = currency['name']
+      const li_value = currency['name']
 
-      let option = document.createElement('option')
-      option.innerHTML = option_value
+      let li = document.createElement('li')
+      li.innerHTML = li_value
+      li.classList.add('a-currency-name')
 
-      currency_select.appendChild(option)
+      currencies_container.appendChild(li)
    }
-
-   $('.ui.dropdown').dropdown();
 }
 
 function isSubsribeable() {

@@ -35,10 +35,10 @@ function calculatePrice(currencies) {
 
    for (currency of currencies) {
       console.log()
-      if (currency['name'] == selected_currency_name) {
+      if (currency['name'] === selected_currency_name) {
 
          let total_sum = input_money_amount / currency['priceUsd']
-         total_sum = total_sum == 0 ? 0 : prettifyNumber(total_sum.toFixed(5))
+         total_sum = total_sum === 0 ? 0 : prettifyNumber(total_sum.toFixed(5))
 
          let rate = prettifyNumber((+currency['priceUsd']).toFixed(5))
 

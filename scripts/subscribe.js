@@ -1,5 +1,5 @@
 let is_email_verified = false
-let is_currency_selected = false
+let is_currency_selected = true
 
 function checkEmailValidity(element) {
    const value = element.value

@@ -124,10 +124,6 @@
             <div class="m-selection">
               <input class="a-input-email" type="text" placeholder="Enter your email" name="email" onkeyup="checkEmailValidity(this)">
 
-              <!-- <select class="m-select-currency-subscribe" name="currency" placeholder="Enter currency" >
-                <option value="">Enter currency</option>
-
-              </select> -->
               <div class="m-select-currency-subscribe searchable">
                 <input class="m-currency-searcher-subscribe" type="text" placeholder="Enter currency" onkeyup="filterFunction(this,event)">
                 <ul class="m-currencies-container-subscribe"></ul>
@@ -154,6 +150,14 @@
       window.onload = () => {
         request(fillCalculatorSelect)
         request(fillSubscribeSelect)
+
+        $('.nav a').click(function(){
+          $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+          }, 500);
+          return false;
+        }); 
+
       }
     </script>
   </body>

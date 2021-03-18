@@ -633,7 +633,7 @@ body
         height: 45px;
         margin-top: 20px;
 
-        text-indent: -2px;
+        text-indent: -1px;
 
         border-radius: 0;
         box-shadow: none;
@@ -900,12 +900,6 @@ body
     padding-top: 48px;
 }
 
-@media  screen and (max-width: 1400px)
-{
-    .a-input-email {
-      text-indent: -2px;
-    }
-}
 
 
 
@@ -931,6 +925,14 @@ body
     line-height: 1.75rem;
     color: @color-white;
     background-color: @color-light-blue;
+    padding-left: 0;
+}
+
+@media  screen and (max-width: 1400px)
+{
+    .m-currency-searcher-subscribe {
+      text-indent: -1px;
+    }
 }
 
 .m-currencies-container-subscribe {
